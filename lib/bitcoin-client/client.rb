@@ -216,7 +216,7 @@ class BitcoinClient::Client
   end
 
   # Returns transactions since <hash> block
-  def listsinceblock(hash, confirmations)
+  def listsinceblock(hash, confirmations = nil)
     @api.request 'listsinceblock', hash, confirmations
   end
 
